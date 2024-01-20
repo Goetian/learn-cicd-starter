@@ -37,3 +37,9 @@ jobs:
 
       - name: Run go fmt and see if files changed
         run: test -z $(go fmt ./...)
+
+      - name: install static
+        run: go install honnef.co/go/tools/cmd/staticcheck@latest
+
+      - name: run static check
+        run: staticcheck ./...
