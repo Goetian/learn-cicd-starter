@@ -29,6 +29,7 @@ func TestGetAPIKey(t *testing.T) {
 	}
 }
 
+// test
 func TestGetAPIKeyWithNumbers(t *testing.T) {
 	//
 
