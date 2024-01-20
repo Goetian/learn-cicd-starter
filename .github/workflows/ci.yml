@@ -22,8 +22,8 @@ jobs:
         run: go test ./... -cover
 
 
-  format:
-    name: Run Formatting
+  Style:
+    name: Style
     runs-on: ubuntu-latest
 
     steps: 
@@ -37,3 +37,15 @@ jobs:
 
       - name: Run go fmt and see if files changed
         run: test -z $(go fmt ./...)
+
+      - name: install static
+        run: go install honnef.co/go/tools/cmd/staticcheck@latest
+
+      - name: run static check
+        run: staticcheck ./...
+
+      - name: Install gosec
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+
+      - name: run gosec
+        run: gosec ./...
