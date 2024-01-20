@@ -22,8 +22,8 @@ jobs:
         run: go test ./... -cover
 
 
-  format:
-    name: Run Formatting
+  style:
+    name: style
     runs-on: ubuntu-latest
 
     steps: 
