@@ -19,6 +19,7 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 )
 
+// make a change to my branch before pull request
 type apiConfig struct {
 	DB *database.Queries
 }
